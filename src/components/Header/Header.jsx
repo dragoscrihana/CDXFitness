@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
-import Logo from '../../assets/logo1.png'
+import Logo from '../../assets/112.png'
 import Bars from '../../assets/bars.png'
 import { Link } from 'react-scroll'
 const Header = () => {

@@ -3,7 +3,7 @@ import './Footer.css'
 import Github from "../../assets/github.png"
 import Instagram from "../../assets/instagram.png"
 import LinkedIn from "../../assets/linkedin.png"
-import Logo from "../../assets/logo1.png"
+import Logo from "../../assets/112.png"
 const Footer = () => {
   return (
     <div className="Footer-container">

@@ -7,13 +7,13 @@ import image4 from "../../assets/image4.png"
 import nb from "../../assets/nb.png"
 import adidas from "../../assets/adidas.png"
 import nike from "../../assets/nike.png"
-import tick from "../../assets/tick.png"
+import tick from "../../assets/tick1.png"
 const Reasons = () => {
   return (
     <div className="Reasons" id='reasons'>
         <div className="left-r">
           <div className='container'>
-            <img src={image1} alt="" />
+            <img src={image1} alt=""/>
             <img src={image2} alt="" />
             <img src={image3} alt="" />
             <img src={image4} alt="" />

@@ -1,9 +1,9 @@
 import './App.css';
-import Footer from './componenets/Footer/Footer';
-import Hero from './componenets/Hero/Hero';
-import Plans from './componenets/Plans/Plans';
-import Programs from './componenets/Programs/Programs';
-import Reasons from './componenets/Reasons/Reasons';
+import Footer from './components/Footer/Footer';
+import Hero from './components/Hero/Hero';
+import Plans from './components/Plans/Plans';
+import Programs from './components/Programs/Programs';
+import Reasons from './components/Reasons/Reasons';
 function App() {
   return (
     <div className="App">

@@ -72,6 +72,7 @@ const Hero = () => {
         </div>
 
         <div className="right">
+          <button className="btn">Log In</button>
           <button className="btn">Join Now</button>
 
           <motion.div

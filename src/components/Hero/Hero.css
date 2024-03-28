@@ -104,7 +104,15 @@
     border: 2px solid var(--orange);
 }
 
-.right>.btn{
+.right>:nth-child(1){
+    position: absolute;
+    right: 9rem;
+    top: 2rem;
+    width: 5rem;
+    color: black;
+}
+
+.right>:nth-child(2){
     position: absolute;
     right: 3rem;
     top: 2rem;

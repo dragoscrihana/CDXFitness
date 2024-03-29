@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../Header/Header'
 import './Hero.css'
 import hero_image from "../../assets/hero_image.png";
@@ -6,10 +6,12 @@ import hero_image_back from "../../assets/hero_image_back1.png";
 import Heart from "../../assets/heart.png";
 import NumberCounter from 'number-counter'
 import {motion} from 'framer-motion'
-const Hero = () => {
+import Login from '../Login/Login';
+const Hero = ({ onLoginClick }) => {
 
   const transition = {type: 'spring', duration : 3}
   const mobile = window.innerWidth<=768 ? true: false;
+  
   return (
     <div className="hero" id='home'>
 
@@ -72,8 +74,9 @@ const Hero = () => {
         </div>
 
         <div className="right">
-          <button className="btn">Log In</button>
+          <button className="btn" onClick={onLoginClick}>Log In</button>
           <button className="btn">Join Now</button>
+  
 
           <motion.div
           initial={{ right: "-1rem "}}

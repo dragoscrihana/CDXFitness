@@ -5,6 +5,7 @@ import SignupForm from './SignupForm'
 import { motion } from 'framer-motion'
 import { AccountContext } from './accountContext'
 import Logo from '../../assets/112.png'
+import CloseIcon from '../../assets/close.png';
 
 const backdropVariants = {
     expanded: {
@@ -27,7 +28,7 @@ const expandingTransition = {
     stiffness: 30
 }
 
-const Login = () => {
+const Login = ({onCloseClick}) => {
     const [isExpanded, setExpanded] = useState(false);
     const [active, setActive] = useState("signin");
 
@@ -54,16 +55,24 @@ const Login = () => {
 
     const contextValue = {switchToSignup, switchToSignin};
 
+    const handleCloseButtonClick = () => {
+        if (typeof onCloseClick === 'function') {
+            onCloseClick();
+        }
+    };
+
   return (
     <div className="login_container">
         <AccountContext.Provider value={contextValue}>
             <div className="BoxContainer">
+                    <button className="CloseButton" onClick={handleCloseButtonClick}>
+                    </button>
                 <div className="TopContainer">
                     <div className="TopLeft">
                         <motion.div initial={false} animate={isExpanded ? "expanded" : "collapsed"} variants={backdropVariants}
                         className="BackDrop" transition={expandingTransition}>
-
                         </motion.div>
+                        
                         {active === "signin" && (
                             <div className="HeaderContainer">
                                 <h2 className="HeaderText">

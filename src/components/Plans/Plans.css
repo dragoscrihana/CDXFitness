@@ -3,7 +3,7 @@
 }
 
 .plans-container{
-    margin-top: -4rem;
+    margin-top: 3rem;
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
@@ -94,5 +94,11 @@
 
     .plan:nth-child(2){
         transform: none;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 847px){
+    .stroke-text{
+        font-size: x-large;
     }
 }

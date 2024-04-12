@@ -3,6 +3,8 @@ import './Header.css'
 import Logo from '../../assets/112.png'
 import Bars from '../../assets/bars.png'
 import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom';
+
 const Header = () => {
 
   const [mobile, setMobile] = useState(window.innerWidth <= 768);
@@ -40,6 +42,14 @@ const Header = () => {
               smooth={true}
             >Home
             </Link>
+          </li>
+
+          <li>
+            <NavLink 
+            to={'/exercises'}
+            className={"nav"}>
+            Exercises
+            </NavLink>
           </li>
 
           <li>

@@ -9,6 +9,7 @@
     flex-direction: column;
     gap: 4rem;
     position: relative;
+    margin-bottom: 3rem;
 }
 
 .plans-blur-1{

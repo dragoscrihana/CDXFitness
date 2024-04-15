@@ -4,11 +4,13 @@ import Header from '../Header/Header'
 import all_exercises from '../../data/all_exercises'
 import Item from '../Item/Item'
 import { Link } from 'react-router-dom'
+import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 const Exercises = (props) => {
   return (
     <div className="exercises">
-      <Header />
+      <Navbar/>
       <div className='shop-category'>
         <div className="shopcategory-indexSort">
           <p>
@@ -18,16 +20,17 @@ const Exercises = (props) => {
         <div className="shopcategory-products">
         {all_exercises.map((item,i)=>{
           if (props.category===item.category) {
-            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
+            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} description={item.description} category={item.category}/>
+          }
+          else if(props.category===""){
+            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} description={item.description} category={item.category}/>
           }
           else{
             return null;
           }
         })}
         </div>
-        <div className="shopcategory-loadmore">
-          Explore More
-        </div>
+      <Footer/>
       </div>
     </div>
   )

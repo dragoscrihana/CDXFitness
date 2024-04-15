@@ -28,9 +28,9 @@ const expandingTransition = {
     stiffness: 30
 }
 
-const Login = ({onCloseClick}) => {
+const Login = ({onCloseClick, state}) => {
     const [isExpanded, setExpanded] = useState(false);
-    const [active, setActive] = useState("signin");
+    const [active, setActive] = useState(state ? "signin" : "signup");
 
     const playExpandingAnimation = () => {
         setExpanded(true);

@@ -75,7 +75,7 @@ const Hero = ({ onLoginClick }) => {
 
         <div className="right">
           <button className="btn" onClick={onLoginClick}>Log In</button>
-          <button className="btn">Join Now</button>
+          <button className="btn" onClick={onLoginClick}>Join Now</button>
   
 
           <motion.div

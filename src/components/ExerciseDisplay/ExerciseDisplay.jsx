@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './ExerciseDisplay.css'
-import Footer from '../Footer/Footer';
 
 const ExerciseDisplay = (props) => {
-    const {product} = props;
+    const { product } = props;
 
     // Function to create HTML markup with line breaks
     const createMarkup = (text) => {
@@ -20,10 +19,10 @@ const ExerciseDisplay = (props) => {
             <div className="productdisplay-right">
                 <h1>{product.name}</h1>
                 <div className="productdisplay-right-prices">
-                    <div className="productdisplay-right-price-new">{product.new_price}</div>
+                    {product.reps}
                 </div>
                 <div className="productdisplay-right-description" dangerouslySetInnerHTML={createMarkup(product.description)} />
-                <p className='productdisplay-right-category'><span>Target :</span>{product.category}</p>
+                <p className='productdisplay-right-category'><span><br />Target :</span>{product.category}</p>
                 <p className='productdisplay-right-category'><span>Tags :</span>Modern, Latest</p>
             </div>
         </div>

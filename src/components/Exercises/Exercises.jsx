@@ -20,10 +20,10 @@ const Exercises = (props) => {
         <div className="shopcategory-products">
         {all_exercises.map((item,i)=>{
           if (props.category===item.category) {
-            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} description={item.description} category={item.category}/>
+            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.reps} description={item.description} category={item.category}/>
           }
           else if(props.category===""){
-            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} description={item.description} category={item.category}/>
+            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.reps} description={item.description} category={item.category}/>
           }
           else{
             return null;

@@ -4,22 +4,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Exercises from './components/Exercises/Exercises';
 import Product from './components/Product/Product';
 import MainPage from './components/MainPage/MainPage';
-import Navbar from './components/Navbar/Navbar';
+import Admin from './components/Admin/Admin';
+import AddExercise from './components/AddExercise/AddExercise';
+import ListExercise from './components/ListExercise/ListExercise';
 function App() {
-  const [showLoginForm, setShowLoginForm] = useState(false);
-
-  const handleLoginButtonClick = () => {
-    setShowLoginForm(true);
-  };
-
-  const handleCloseButtonClick = () => {
-    setShowLoginForm(false);
-  };
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/addproduct" element={<AddExercise />} />
+        <Route path="/admin/listproduct" element={<ListExercise />} />
         <Route path='/exercises' element={<Exercises category="" />} />
         <Route path='/chest' element={<Exercises category="Chest"/>}/>
         <Route path='/back' element={<Exercises category="Back"/>}/>
@@ -32,7 +28,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-
   );
 }
 

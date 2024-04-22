@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Header from '../Header/Header'
 import './Hero.css'
 import hero_image from "../../assets/hero_image.png";
@@ -6,7 +6,6 @@ import hero_image_back from "../../assets/hero_image_back1.png";
 import Heart from "../../assets/heart.png";
 import NumberCounter from 'number-counter'
 import {motion} from 'framer-motion'
-import Login from '../Login/Login';
 const Hero = ({ onLoginClick }) => {
 
   const transition = {type: 'spring', duration : 3}

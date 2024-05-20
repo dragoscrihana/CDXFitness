@@ -57,6 +57,8 @@ const Login = ({onCloseClick, state}) => {
     const handleCloseButtonClick = () => {
         if (typeof onCloseClick === 'function') {
             onCloseClick();
+            
+            window.location.reload();
         }
     };
 

@@ -59,20 +59,6 @@ app.post("/upload", upload.single('exercise'), (req, res) => {
     });
 });
 
-const fetchuser = async (req, res, next) => {
-    const token = req.header("auth-token");
-    if (!token) {
-        res.status(401).send({ errors: "Please authenticate using a valid token" });
-    }
-    try {
-        const data = jwt.verify(token, "secret_ecom");
-        req.user = data.user;
-        next();
-    } catch (error) {
-        res.status(401).send({ errors: "Please authenticate using a valid token" });
-    }
-};
-
 const Users = mongoose.model("Users", {
     name: {
         type: String,
@@ -94,6 +80,29 @@ const Users = mongoose.model("Users", {
     }
 });
 
+app.post('/isadmin', async (req, res) => {
+    console.log("Admin Status");
+    try {
+        const { authToken } = req.body;
+
+        if (!authToken) {
+            return res.status(401).json({ errors: "Please provide a valid auth token" });
+        }
+
+        const user = await findUserByAuthToken(authToken);
+
+        if (!user) {
+            return res.status(404).json({ errors: "User not found" });
+        }
+
+        const isAdmin = user.admin === true || user.admin === "true";
+
+        res.json({ success: true, isAdmin });
+    } catch (error) {
+        console.error('Error checking admin status:', error);
+        res.status(500).json({ success: false, error: "Server error" });
+    }
+});
 
 app.post('/login', async (req, res) => {
     console.log("Login");

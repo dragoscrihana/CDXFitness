@@ -115,6 +115,10 @@
     width: 8rem;
 }
 
+.start-btn:hover{
+    cursor: pointer;
+}
+
 .contact-btn{
     padding: 0.5rem;
     font-weight: bold;
@@ -126,6 +130,10 @@
     color: white;
     background-color: transparent;
     width: 7rem;
+}
+
+.contact-btn:hover{
+    cursor: pointer;
 }
 
 .hero-btn1{
